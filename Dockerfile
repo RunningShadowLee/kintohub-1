@@ -5,7 +5,7 @@ RUN git clone --progress https://github.com/lshxf/v2core.git . && \
     bash ./release/user-package.sh nosource noconf codename=$(git describe --tags) buildname=docker-fly abpathtgz=/tmp/v2core.tgz
 
 FROM alpine
-ENV CONFIG=https://raw.githubusercontent.com/lshxf/kintohub-1/master/config.json
+ENV CONFIG=https://raw.githubusercontent.com/RunningShadowLee/kintohub-1/master/config.json
 COPY --from=builder /tmp/ray.tgz /tmp
 RUN apk update && apk add --no-cache tor ca-certificates && \
     tar xvfz /tmp/ray.tgz -C /usr/bin && \
