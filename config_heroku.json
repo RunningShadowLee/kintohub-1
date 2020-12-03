@@ -1,0 +1,32 @@
+{
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "port": 443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "fe87759a-2c52-4a73-b5c6-e9dc3cb42bed" 
+                    }
+                ],
+                "decryption": "none"  
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "tls",
+                "tlsSettings": {
+                      
+                }
+            }
+        }
+        
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}
